@@ -15,8 +15,6 @@ const typeIcons: Record<string, string> = {
   'Presentatie': '📽️',
 }
 
-export const dynamic = 'force-dynamic'
-
 export default function Home() {
   const presentations = getAllPresentations()
 
@@ -54,19 +52,11 @@ export default function Home() {
               <Link
                 key={p.slug}
                 href={`/${p.slug}`}
-                className="group flex items-center gap-4 rounded-xl px-5 py-4 transition-all"
+                className="group flex items-center gap-4 rounded-xl px-5 py-4 transition-all hover:shadow-lg"
                 style={{
                   background: 'var(--bg-card)',
                   boxShadow: 'var(--shadow)',
                   border: '1px solid var(--border-light)',
-                }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.boxShadow = 'var(--shadow-lg)'
-                  e.currentTarget.style.borderColor = 'var(--border)'
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.boxShadow = 'var(--shadow)'
-                  e.currentTarget.style.borderColor = 'var(--border-light)'
                 }}
               >
                 <span className="text-2xl">{typeIcons[p.type] || '📄'}</span>
