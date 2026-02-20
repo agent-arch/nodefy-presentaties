@@ -164,7 +164,61 @@ export default function CodeZeroPresentation() {
       <Quote>&ldquo;De technische basis (Shopware 6) is solide. Het merk is authentiek. De kanalen zijn er. Wat ontbreekt is de juiste configuratie en strategie om alles samen te laten werken.&rdquo;</Quote>
     </div>,
 
-    // SLIDE 8: Closing
+    // SLIDE 8: Concurrenten
+    <div key="competitors">
+      <Tag>06 Concurrentie</Tag>
+      <H2>Waar staat CODE-ZERO in de markt?</H2>
+      <Subtitle>7 concurrenten geanalyseerd in de nautische lifestyle & sailing fashion markt.</Subtitle>
+
+      <Card>
+        <H3>Vergelijkingsmatrix</H3>
+        <div style={{ overflowX: 'auto', margin: '8px -8px' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 12 }}>
+            <thead>
+              <tr style={{ borderBottom: '2px solid var(--border)' }}>
+                <th style={{ textAlign: 'left', padding: '8px 6px', color: 'var(--text-muted)', fontWeight: 600, fontSize: 10, textTransform: 'uppercase', letterSpacing: 1 }}>Merk</th>
+                <th style={{ textAlign: 'center', padding: '8px 4px', color: 'var(--text-muted)', fontWeight: 600, fontSize: 10, textTransform: 'uppercase' }}>Lifestyle</th>
+                <th style={{ textAlign: 'center', padding: '8px 4px', color: 'var(--text-muted)', fontWeight: 600, fontSize: 10, textTransform: 'uppercase' }}>Prijs</th>
+                <th style={{ textAlign: 'center', padding: '8px 4px', color: 'var(--text-muted)', fontWeight: 600, fontSize: 10, textTransform: 'uppercase' }}>Digital</th>
+                <th style={{ textAlign: 'center', padding: '8px 4px', color: 'var(--text-muted)', fontWeight: 600, fontSize: 10, textTransform: 'uppercase' }}>NL/DE</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { name: 'CODE-ZERO', lifestyle: '⭐⭐⭐⭐⭐', price: '€70-140', digital: '⭐⭐⭐', nlde: '⭐⭐⭐⭐', highlight: true },
+                { name: 'North Sails', lifestyle: '⭐⭐⭐⭐', price: '€80-250', digital: '⭐⭐⭐⭐⭐', nlde: '⭐⭐⭐' },
+                { name: 'Helly Hansen', lifestyle: '⭐⭐⭐', price: '€60-200', digital: '⭐⭐⭐⭐', nlde: '⭐⭐⭐⭐' },
+                { name: 'Henri Lloyd', lifestyle: '⭐⭐⭐⭐', price: '€50-200', digital: '⭐⭐⭐', nlde: '⭐⭐' },
+                { name: 'Musto', lifestyle: '⭐⭐', price: '€80-300', digital: '⭐⭐⭐', nlde: '⭐⭐' },
+                { name: 'Gaastra/NZA', lifestyle: '⭐⭐⭐⭐', price: '€50-150', digital: '⭐', nlde: '⭐⭐⭐⭐' },
+              ].map((r, i) => (
+                <tr key={i} style={{ borderBottom: '1px solid var(--border)', background: r.highlight ? 'var(--red)08' : 'transparent' }}>
+                  <td style={{ padding: '10px 6px', fontWeight: r.highlight ? 700 : 500, color: r.highlight ? 'var(--red)' : 'var(--text)' }}>{r.name}</td>
+                  <td style={{ textAlign: 'center', padding: '10px 4px', fontSize: 11 }}>{r.lifestyle}</td>
+                  <td style={{ textAlign: 'center', padding: '10px 4px', fontSize: 11, color: 'var(--text-secondary)' }}>{r.price}</td>
+                  <td style={{ textAlign: 'center', padding: '10px 4px', fontSize: 11 }}>{r.digital}</td>
+                  <td style={{ textAlign: 'center', padding: '10px 4px', fontSize: 11 }}>{r.nlde}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Card>
+
+      <Card style={{ borderLeft: '3px solid var(--green)' }}>
+        <H3>🎯 Grootste kans: Gaastra/NZA vacuüm</H3>
+        <CardDetail>Gaastra/NZA is een stervend merk zonder digitale strategie. Hun doelgroep (NL/DE, 35+, nautisch lifestyle) is wees. CODE-ZERO kan deze klanten opvangen met gerichte Meta/Google campagnes.</CardDetail>
+      </Card>
+
+      <Card style={{ borderLeft: '3px solid var(--amber)' }}>
+        <H3>⚠️ Grootste concurrent: North Sails</H3>
+        <CardDetail>600K+ Instagram followers, SailGP sponsoring, flagship stores. Maar: premium pricing (€150+). CODE-ZERO zit in het sweet spot daaronder (€70-140).</CardDetail>
+      </Card>
+
+      <Quote>&ldquo;CODE-ZERO opereert in een unieke sweet spot: lifestyle sailing fashion die betaalbaar, stijlvol en authentiek is. De meeste concurrenten zijn óf te technisch, óf te groot en verwaterd, óf stervend.&rdquo;</Quote>
+    </div>,
+
+    // SLIDE 9: Closing
     <div key="closing" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', minHeight: '70vh', textAlign: 'center' }}>
       <Tag>Quick Scan</Tag>
       <H1 style={{ fontSize: 36 }}>Vragen?</H1>
